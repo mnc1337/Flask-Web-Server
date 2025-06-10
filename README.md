@@ -25,4 +25,4 @@ Also you can configure `host` and `port` parameters as you want:
     - `127.0.0.1` or `localhost` - server will be available only on your local machine(your computer);
     - `0.0.0.0` - makes your server externally available in your (local) or even global network(if port forwarding is configured);
 - port:
-    a number in range 0-65536 - if it`s not taken by another process.
+    a number in range 0-65535 (including both points) - if it`s not taken by another process.
