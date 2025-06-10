@@ -1,6 +1,6 @@
 # Flask-Web-Server
 
-# Simple web server for sharing files.
+## Simple web server for sharing files.
 
 Actions with files that are supported here:
 - Uploading;
@@ -9,7 +9,7 @@ Actions with files that are supported here:
 
 ---
 
-# There are four keys(declared as constants) in helpful_files/config.py:
+## There are four keys(declared as constants) in helpful_files/config.py:
 
 - SECRET_KEY(for session signing and CSRF-protection in forms);
 - ADMIN_KEY(for admin who is a head of the server);
