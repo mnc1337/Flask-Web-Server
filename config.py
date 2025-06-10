@@ -1,0 +1,4 @@
+SECRET_KEY = ""
+ADMIN_KEY = ""
+ENTER_KEY = ""
+DELETE_KEY = ""

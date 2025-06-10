@@ -1,0 +1,55 @@
+body, button {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+*::selection {
+    background-color: gold;
+    color: darkgreen;
+}
+
+#errorStatusHeader::selection, #mainB::selection {
+    color: darkred;
+}
+
+#infoDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+#errorStatusHeader {
+    margin: 0;
+    font-size: 45px;
+    color: red;
+}
+
+#errorMessageHeader, #psHeader {
+    color: darkblue;
+    margin-top: 0;
+}
+
+#mainBtn {
+    border: 2px dashed blue;
+    border-radius: 10px;
+    padding: 4px;
+    background: transparent;
+    color: darkblue;
+}
+
+#mainBtn:hover {
+    transform: scale(1.1);
+    box-shadow: 1px 1px 10px blue,
+                -1px -1px 10px blue;
+    cursor: pointer;
+    color: blue;
+    transition: all 0.3s ease-in-out;
+}
+
+#mainB {
+    color: red;
+}

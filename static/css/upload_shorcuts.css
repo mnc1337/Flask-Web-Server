@@ -1,0 +1,79 @@
+body, button {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(135deg, yellow, orange);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+*::selection {
+    background-color: darkblue;
+    color: gold;
+}
+
+#mainHeader {
+    color: darkblue;
+}
+
+#mainTable {
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+#mainTable, tr, td, th {
+    border: 1px solid blue;
+    padding: 4px;
+}
+
+th {
+    color: darkgreen;
+}
+
+td {
+    color: darkblue;
+}
+
+td:nth-child(even) {
+    text-align: center;
+}
+
+#mainBtnDiv {
+    margin-top: 30px;
+}
+
+#mainBtn {
+    border: 2px dashed blue;
+    border-radius: 10px;
+    padding: 5px;
+    background: transparent;
+    color: darkblue;
+}
+
+#mainBtn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 1px 1px 10px blue,
+                -1px -1px 10px blue;
+    color: blue;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width:500px) {
+    #mainTable {
+        font-size: 16px;
+    }
+}
+
+@media (max-width:480px) {
+    #mainTable {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,103 @@
+body,
+input,
+button {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+body {
+    background: linear-gradient(135deg, rgb(162, 230, 162), rgb(238, 238, 140));
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+*::selection {
+    background-color: gold;
+    color: darkblue;
+}
+
+#mainForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+#mainInput {
+    border: 2px dashed darkblue;
+    border-radius: 10px;
+    padding: 10px;
+    color: darkblue;
+}
+
+#submitInput {
+    border: 2px dashed darkblue;
+    border-radius: 10px;
+    padding: 4px;
+    color: darkblue;
+    background: transparent;
+}
+
+#submitInput:hover {
+    transform: scale(1.1);
+    box-shadow: 1px 1px 10px blue,
+        -1px -1px 10px blue;
+    color: blue;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#funcsDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 35px;
+    gap: 20px;
+}
+
+#funcsDivHeader {
+    color: darkred;
+    margin-bottom: 10px;
+}
+
+#funcsDivHeader::selection {
+    color: red;
+}
+
+#downloadFileDiv,
+#deleteFileDiv,
+#getAllFilesDiv,
+#shortcutsDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: darkblue;
+}
+
+#downloadFileBtn,
+#deleteFileBtn,
+#getAllFilesBtn,
+#shortcutsBtn {
+    color: darkgreen;
+    border: 2px dashed darkgreen;
+    border-radius: 10px;
+    padding: 4px;
+    background: transparent;
+}
+
+#downloadFileBtn:hover,
+#deleteFileBtn:hover,
+#getAllFilesBtn:hover,
+#shortcutsBtn:hover {
+    transform: scale(1.1);
+    box-shadow: 1px 1px 10px darkgreen,
+        -1px -1px 10px darkgreen;
+    color: darkgreen;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
