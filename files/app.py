@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, jsonify, send_from_directory, redirect, url_for
-from config import *
+from helpful_files.config import *
 import os
 from send2trash import send2trash
 from flask_limiter import Limiter
