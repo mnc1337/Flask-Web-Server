@@ -1,5 +1,7 @@
 # Flask-Web-Server
 
+---
+
 ## Simple web server for sharing files.
 
 Actions with files that are supported here:
@@ -18,7 +20,7 @@ Actions with files that are supported here:
 
 ---
 
-Main file (engine of server) has the next location: files/app.py.
+## Main file (engine of server) has the next location: files/app.py.
 You can start the server by starting this file.
 Also you can configure `host` and `port` parameters as you want:
 - host:
