@@ -40,4 +40,4 @@ Also you can configure `host` and `port` parameters as you want:
 
 ---
 
-## To launch server, choose root of the directory by default and use the next command: `python app.py` - it will start server on configured `host` and `port` (aforementioned).
+### To launch server, choose root of the directory by default and use the next command: `python app.py` - it will start server on configured `host` and `port` (aforementioned).
