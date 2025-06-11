@@ -19,7 +19,7 @@ def limit_func() -> Response:
 limiter = Limiter(
     key_func=limit_func,
     app=app,
-    default_limits=["2 per 5 seconds"], # some limits for correct work:)
+    default_limits=["2 per 5 seconds"],
 )
 
 UPLOAD_FOLDER = "uploads"
@@ -167,7 +167,7 @@ def delete_all(admin_key) -> Response:
     else:
         return jsonify(error="Admin key is incorrect:("), 400
 
-@app.route("/404") # for testing this template and error code:)
+@app.route("/404")
 def error_404() -> Tuple[str, int]:
     return render_template("404.html"), 404
         
