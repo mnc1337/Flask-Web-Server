@@ -1,0 +1,31 @@
+body, button {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(135deg, rgb(162, 230, 162), rgb(238, 238, 140));
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+*::selection {
+    background-color: gold;
+    color: blue;
+}
+
+#mainHeader::selection {
+    color: red;
+}
+
+#mainHeader {
+    color: darkred;
+}
+
+ol {
+    text-align: left;
+    color: darkblue;
+}
+
+li {
+    word-wrap: break-word;
+}

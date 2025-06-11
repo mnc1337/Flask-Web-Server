@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All files</title>
+    <link rel="stylesheet" href="/static/css/all_files.css">
+</head>
+<body>
+    {% if files %}
+        <h1 id="mainHeader">All files in upload directory:</h1>
+        <ol>
+            {% for file in files %}
+                <li>
+                    <b>Name:</b> {{file.filename}}<br>
+                    <b>Path:</b> {{file.filepath}}<br>
+                    <b>Size(in bytes):</b> {{file.filesize}}<br>
+                </li>
+                <br>
+            {% endfor %}
+        </ol>
+    {% else %}
+        <h1 id="mainHeader">There is not any file in upload directory</h1>
+    {% endif %}
+</body>
+</html>

@@ -137,15 +137,22 @@ def delete_by_filename(delete_key, filename):
 @app.route("/<string:enter_key>/get_all")
 def get_all(enter_key):
     if enter_key == ENTER_KEY:
-        if os.listdir(UPLOAD_FOLDER):
-            return jsonify([{
-                "ID": idx,
-                "filename": elem.name,
-                "filepath": elem.path,
-                "filesize(in bytes)": elem.stat().st_size,
-            } for idx, elem in enumerate(os.scandir(UPLOAD_FOLDER), start=1) if elem.is_file()]), 200
-        else:
-            return jsonify(info="There is not any file in directory:("), 200
+        files = [{
+            "filename": elem.name,
+            "filepath": elem.path,
+            "filesize": elem.stat().st_size
+        } for elem in os.scandir(UPLOAD_FOLDER) if elem.is_file()]
+
+        return render_template("all_files.html", files=files, upload_folder=UPLOAD_FOLDER)
+        # if os.listdir(UPLOAD_FOLDER):
+        #     return jsonify([{
+        #         "ID": idx,
+        #         "filename": elem.name,
+        #         "filepath": elem.path,
+        #         "filesize(in bytes)": elem.stat().st_size,
+        #     } for idx, elem in enumerate(os.scandir(UPLOAD_FOLDER), start=1) if elem.is_file()]), 200
+        # else:
+        #     return jsonify(info="There is not any file in directory"), 200
     else:
         return render_template("key_error.html"), 400
 
@@ -157,9 +164,9 @@ def delete_all(admin_key):
                 for elem in os.listdir(UPLOAD_FOLDER):
                     full_path = os.path.join(UPLOAD_FOLDER, elem)
                     send2trash(full_path)
-                return jsonify(message="All files were successfully sent to a trash bin"), 200
+                return jsonify(message="All files were successfully sent to the trash bin"), 200
             else:
-                return jsonify(info="There is not any file in directory:("), 200
+                return jsonify(info="There is not any file in directory"), 200
         except Exception as e:
             return jsonify({
                 "error": "Exception",
@@ -189,4 +196,4 @@ def too_many_requests(error):
     return render_template("429.html"), 429
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0")
