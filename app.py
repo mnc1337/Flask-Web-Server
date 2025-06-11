@@ -19,7 +19,7 @@ def limit_func() -> Response:
 limiter = Limiter(
     key_func=limit_func,
     app=app,
-    default_limits=["3 per 5 seconds"],
+    default_limits=["2 per 5 seconds"], # some limits for correct work:)
 )
 
 UPLOAD_FOLDER = "uploads"
