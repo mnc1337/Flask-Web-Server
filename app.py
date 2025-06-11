@@ -1,3 +1,9 @@
+"""
+Copyright (c) 2025 mnc1337
+This project is under MIT license. 
+Check LICENSE file in the root directory for details.
+"""
+
 from flask import Flask, render_template, request, jsonify, send_from_directory, redirect, url_for, Response
 from helpful_files.config import *
 import os
@@ -118,7 +124,7 @@ def download_by_filename(enter_key, filename) -> Response:
         return render_template("key_error.html"), 400
     
 @app.route("/<string:delete_key>/delete/<string:filename>", methods=["GET", "DELETE"])
-def delete_by_filename(delete_key, filename) -> Response | str:
+def delete_by_filename(delete_key, filename) -> Response:
     if delete_key == DELETE_KEY:
         full_path = os.path.join(UPLOAD_FOLDER, filename)
         if os.path.exists(full_path):
@@ -136,7 +142,7 @@ def delete_by_filename(delete_key, filename) -> Response | str:
         return render_template("key_error.html"), 400
 
 @app.route("/<string:enter_key>/get_all")
-def get_all(enter_key) -> str:
+def get_all(enter_key) -> Response:
     if enter_key == ENTER_KEY:
         files = [{
             "filename": elem.name,
