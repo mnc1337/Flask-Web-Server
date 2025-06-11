@@ -26,3 +26,18 @@ Also you can configure `host` and `port` parameters as you want:
     - `0.0.0.0` - makes your server externally available in your (local) or even global network(if port forwarding is configured);
 - port:
     a number in range 0-65535 (including both points) - if it`s not taken by another process.
+
+---
+
+## Some words about structure:
+- helpful_files - folder with additional files that provide functions like generating new values, hashing existing and configuring the server protection;
+- static - folder for static files(css/js/images etc.):
+    - css: contains .css files(styles for HTML-pages);
+    - js: contains .js files(scripts for HTML-pages);
+- templates - folder which contains HTML-pages;
+- uploads - folder for files, uploaded from server;
+- app.py - main file that unites all project and helps to start all server(from one file).
+
+---
+
+## To launch server, choose root of the directory by default and use the next command: `python app.py` - it will start server on configured `host` and `port` (aforementioned).
