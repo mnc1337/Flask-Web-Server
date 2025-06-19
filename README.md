@@ -32,6 +32,7 @@ Also you can configure `host` and `port` parameters as you want:
 ---
 
 ## Some words about structure:
+- archive (7z) - folder with an archive and .txt file with hash sums of archive;
 - helpful_files - folder with additional files that provide functions like generating new values, hashing existing and configuring the server protection;
 - static - folder for static files(css/js/images etc.):
     - css: contains .css files(styles for HTML-pages);
