@@ -43,4 +43,9 @@ Also you can configure `host` and `port` parameters as you want:
 
 ---
 
+## Some words about archive:
+`IMPORTANT`: Archive contains all directories and files, except for one directory: `archive (7z)` (because archive is here), so if you download a ZIP-archive from GitHub interface (Code -> Download ZIP), it will have different hash sums. If you download an archive from `archive (7z)` directory - hash sums will be the same as in `hash_sums.txt` file.
+
+---
+
 ### To launch server, choose root of the directory by default and use the next command: `python app.py` - it will start server on configured `host` and `port` (aforementioned).
