@@ -32,7 +32,7 @@ Also you can configure `host` and `port` parameters as you want:
 ---
 
 ## Some words about structure:
-- archive (7z) - folder with an archive and .txt file with hash sums of archive;
+- _security - folder with a security archive, which has nested archive with server files (`.7z`) and a digital sign (`.asc`);
 - helpful_files - folder with additional files that provide functions like generating new values, hashing existing and configuring the server protection;
 - static - folder for static files (css/js/images etc.):
     - css: contains .css files (styles for HTML-pages);
@@ -43,8 +43,8 @@ Also you can configure `host` and `port` parameters as you want:
 
 ---
 
-## Some words about archive:
-`IMPORTANT`: Archive contains all directories and files, except for one directory: `archive (7z)` (because archive is here), so if you download a ZIP-archive from GitHub interface (Code -> Download ZIP), which contains this directory, it will have different hash sums. If you download an archive from `archive (7z)` directory - hash sums will be the same as in `hash_sums.txt` file.
+## Security
+There is a `_security` folder in projects structure. It contains an archive with a nested archive and an `.asc` file - digital signature. **To check archive originality**, you can download archive, extract nested archive (`.7z`) and `.asc` file from it to directory **selected by you** and use there the next command in Bash/WSL console: `gpg --verify flask_webserver_archive.7z.asc flask_webserver_archive.7z` - first parameter is a digital signature (`.asc` file), second parameter is an archive.
 
 ---
 
