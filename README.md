@@ -44,7 +44,7 @@ Also you can configure `host` and `port` parameters as you want:
 ---
 
 ## Security
-There is a `_security` folder in projects structure. It contains an archive with a nested archive and an `.asc` file - digital signature. **To check archive originality**, you can download archive, extract nested archive (`.7z`) and `.asc` file from it to directory **selected by you** and use there the next command in Bash/WSL console: `gpg --verify flask_webserver_archive.7z.asc flask_webserver_archive.7z` - first parameter is a digital signature (`.asc` file), second parameter is an archive.
+There is a `_security` folder in projects structure. It contains an archive with a nested archive and an `.asc` file - digital signature. **To check archive originality**, you can download archive **from `_security` folder**, extract nested archive (`.7z`) and `.asc` file from it to directory **selected by you** and use there the next command in Bash/WSL console: `gpg --verify flask_webserver_archive.7z.asc flask_webserver_archive.7z` - first parameter is a digital signature (`.asc` file), second parameter is an archive.
 
 ---
 
